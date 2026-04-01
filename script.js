@@ -74,28 +74,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Animate skill bars on scroll
-const animateSkillBars = () => {
-    const skillBars = document.querySelectorAll('.skill-progress');
-
-    skillBars.forEach((bar) => {
-        const rect = bar.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-
-        if (isVisible && !bar.classList.contains('animated')) {
-            bar.classList.add('animated');
-            const width = bar.style.width;
-            bar.style.width = '0%';
-            setTimeout(() => {
-                bar.style.width = width;
-            }, 100);
-        }
-    });
-};
-
-window.addEventListener('scroll', animateSkillBars);
-window.addEventListener('load', animateSkillBars);
-
 // Contact form handling
 const contactForm = document.getElementById('contact-form');
 

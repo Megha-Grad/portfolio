@@ -256,10 +256,10 @@ body {
     margin: 0 auto;
 }
 
-/* About Section */
+/* About Section (follows projects — alternate band) */
 .about {
     padding: 80px 0;
-    background: var(--bg-primary);
+    background: var(--bg-secondary);
 }
 
 .about-content {
@@ -503,83 +503,6 @@ body {
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
-}
-
-/* Skills Section */
-.skills {
-    padding: 80px 0;
-    background: var(--bg-secondary);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 3rem;
-}
-
-.skills-category h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.skill-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.skill-name {
-    min-width: 140px;
-    font-weight: 500;
-    color: var(--text-primary);
-}
-
-.skill-bar {
-    flex: 1;
-    height: 8px;
-    background: var(--bg-accent);
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.skill-progress {
-    height: 100%;
-    background: var(--gradient-primary);
-    border-radius: 4px;
-    transition: width 1s ease;
-}
-
-.skill-percentage {
-    min-width: 40px;
-    text-align: right;
-    font-weight: 500;
-    color: var(--primary-color);
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.skill-tag {
-    background: white;
-    color: var(--primary-color);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: 500;
-    border: 2px solid var(--primary-color);
-    transition: all 0.3s ease;
-}
-
-.skill-tag:hover {
-    background: var(--primary-color);
-    color: white;
 }
 
 /* Projects Section */
@@ -837,10 +760,6 @@ body {
     }
 
     .contact-content {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-grid {
         grid-template-columns: 1fr;
     }
 
