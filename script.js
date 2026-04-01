@@ -66,10 +66,10 @@ const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     if (!navbar) return;
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 4px 6px -1px rgb(0 0 0 / 0.1)';
+        navbar.style.background = 'rgba(251, 249, 246, 0.98)';
+        navbar.style.boxShadow = '0 4px 6px -1px rgb(45 30 20 / 0.08)';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.background = 'rgba(251, 249, 246, 0.95)';
         navbar.style.boxShadow = 'none';
     }
 });
