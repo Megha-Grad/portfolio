@@ -311,6 +311,19 @@ body {
 .about-image .image-placeholder {
     width: 250px;
     height: 250px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .resume-link {
@@ -509,22 +522,24 @@ body {
 }
 
 .footer-links {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    color: #ffffff;
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.9);
+    color: #ffffff;
     text-decoration: none;
 }
 
 .footer-links a:hover {
-    color: #93c5fd;
+    color: #ffffff;
     text-decoration: underline;
+    opacity: 0.95;
 }
 
 .footer-sep {
     margin: 0 0.5rem;
-    opacity: 0.6;
+    color: #ffffff;
 }
 
 /* Responsive Design */
