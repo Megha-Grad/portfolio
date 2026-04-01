@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Megha Mistry — Portfolio</title>
-    <meta name="description" content="Megha Mistry — M.S.E. Electrical Engineering, UPenn. Embedded systems, IoT, and firmware.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='85'>⚡</text></svg>">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar" aria-label="Primary">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#home">Megha Mistry</a>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#education" class="nav-link">Education</a>
-            </div>
-            <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -30,32 +29,30 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">
-                    Hi, I'm <span class="highlight" id="hero-name">Megha Mistry</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Electrical Engineer · Embedded Systems
-                </p>
+                <h1 class="hero-title">Hi, I'm <span class="highlight" id="hero-name">Megha Mistry</span></h1>
+                <h2 class="hero-subtitle">Electrical Engineer · Embedded Systems</h2>
                 <p class="hero-description">
-                    M.S.E. candidate at Penn building firmware, hardware, and intelligent systems — from Zephyr RTOS and RISC-V to agentic AI on AWS.
+                    M.S.E. candidate at Penn building firmware, hardware, and intelligent systems from Zephyr RTOS and RISC-V to agentic AI on AWS.
                 </p>
                 <div class="hero-buttons">
                     <a href="mailto:megham@seas.upenn.edu" class="btn btn-primary">Email me</a>
                     <a href="#projects" class="btn btn-secondary">View Projects</a>
-                    <a href="./Megha_Resume_2026.pdf" class="btn btn-secondary" download>Resume (PDF)</a>
+                    <a href="#" class="btn btn-secondary">Resume (PDF)</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="image-placeholder">
-                    <img src="./images/Megha-Mistry.jpg" alt="Megha Mistry headshot" width="300" height="300">
+                    <i class="fas fa-user"></i>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
@@ -64,150 +61,139 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="./images/vendguard_device.jpg" alt="VendGuard IoT health monitoring for vending machines">
+                        <i class="fas fa-microchip"></i>
                     </div>
                     <div class="project-content">
                         <h3>VendGuard</h3>
-                        <p>
-                            Zephyr RTOS on STM32WL55JC with TMP117 and ADXL345, LoRaWAN 1.0.4, FUOTA, edge anomaly detection, CI with GitHub Actions, and telemetry toward AWS / InfluxDB (~25% maintenance cost target).
-                        </p>
+                        <p>Zephyr RTOS on STM32WL55JC with TMP117 and ADXL345, LoRaWAN 1.0.4, FUOTA, edge anomaly detection, CI with GitHub Actions, and telemetry toward AWS / InfluxDB (~25% maintenance cost target).</p>
                         <div class="project-tags">
                             <span class="project-tag">Zephyr</span>
                             <span class="project-tag">LoRaWAN</span>
                             <span class="project-tag">AWS</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://ese5180.github.io/iot-venture-f25-the-circuiteers/" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                                Project site
-                            </a>
-                        </div>
+                        <a href="#" class="project-link">
+                            Project site <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="./images/hand_gif.gif" alt="IoT hand exoskeleton">
+                        <i class="fas fa-hand-paper"></i>
                     </div>
                     <div class="project-content">
                         <h3>IoT-Enabled Hand Exoskeleton</h3>
-                        <p>
-                            EMG-based local control with WiFi remote operation (~1° finger resolution). FreeRTOS on SAMW25 for EMG, IMU, and servos; custom Altium PCB.
-                        </p>
+                        <p>EMG-based local control with WiFi remote operation (~1° finger resolution). FreeRTOS on SAMW25 for EMG, IMU, and servos; custom Altium PCB.</p>
                         <div class="project-tags">
                             <span class="project-tag">FreeRTOS</span>
                             <span class="project-tag">EMG</span>
                             <span class="project-tag">Altium</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://ese5160.github.io/a14g-final-submission-s25-t20-the-ohmies/index.html" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                                Project site
-                            </a>
-                        </div>
+                        <a href="#" class="project-link">
+                            Project site <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="./images/Penske.png" alt="Penske internship">
+                        <i class="fas fa-brain"></i>
                     </div>
                     <div class="project-content">
                         <h3>Penske — Advanced Analytics</h3>
-                        <p>
-                            Six AI use cases for logistics/fleet ops; agentic meeting pipeline on Bedrock, S3, Lambda; internal deployment for security and IP protection.
-                        </p>
+                        <p>Six AI use cases for logistics/fleet ops; agentic meeting pipeline on Bedrock, S3, Lambda; internal deployment for security and IP protection.</p>
                         <div class="project-tags">
                             <span class="project-tag">Agentic AI</span>
                             <span class="project-tag">AWS</span>
                             <span class="project-tag">Analytics</span>
+                            <span class="project-tag">Penske</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://www.penske.com" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                                Penske
-                            </a>
-                        </div>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-lock"></i> Internal
+                        </a>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="./images/IMG_2115.png" alt="Pipelined RISC-V processor">
+                        <i class="fas fa-cpu"></i>
                     </div>
                     <div class="project-content">
                         <h3>Pipelined RISC-V Processor</h3>
-                        <p>
-                            Five-stage RV32IM pipeline with forwarding, load-to-use and divide-to-use stalls; cycle-accurate simulation and timing analysis.
-                        </p>
+                        <p>Five-stage RV32IM pipeline with forwarding, load-to-use and divide-to-use stalls; cycle-accurate simulation and timing analysis.</p>
                         <div class="project-tags">
                             <span class="project-tag">System Verilog</span>
                             <span class="project-tag">RISC-V</span>
                             <span class="project-tag">CPU design</span>
                         </div>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-lock"></i> Academic
+                        </a>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="./images/5190.jpg" alt="R.E.F.R.E.S.H F1 racing glove">
+                        <i class="fas fa-flag-checkered"></i>
                     </div>
                     <div class="project-content">
                         <h3>R.E.F.R.E.S.H — F1 Racing Glove</h3>
-                        <p>
-                            Pulse oximetry and GSR on a dual-MCU platform (ATmega328PB + ESP32), PWM cooling fans, and custom ML for hydration classification (~98% accuracy).
-                        </p>
+                        <p>Pulse oximetry and GSR on a dual-MCU platform (ATmega328PB + ESP32), PWM cooling fans, and custom ML for hydration classification (~98% accuracy).</p>
                         <div class="project-tags">
                             <span class="project-tag">Wearables</span>
                             <span class="project-tag">ML</span>
                             <span class="project-tag">ESP32</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://upenn-embedded.github.io/final-project-r-e-f-r-e-s-h/" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                                Project site
-                            </a>
-                        </div>
+                        <a href="#" class="project-link">
+                            Project site <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Embedded firmware, hardware, and applied AI</p>
-            </div>
             <div class="about-content">
                 <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <h3 style="font-size: 1.3rem; color: var(--text-secondary); margin-bottom: 1.5rem; font-weight: 400;">
+                        Embedded firmware and hardware development
+                    </h3>
                     <p>
-                        I’m completing my M.S.E. in Electrical Engineering at the University of Pennsylvania, with a B.Tech from Pandit Deendayal Energy University (India). I work where <strong>embedded firmware</strong>, <strong>PCB and sensor integration</strong>, and <strong>applied AI</strong> meet — from real-time Zephyr and FreeRTOS systems to agentic workflows on AWS.
+                        I'm completing my M.S.E. in Electrical Engineering at the University of Pennsylvania, with a B.Tech from Pandit Deendayal Energy University (India). I work where <strong>embedded firmware</strong>, <strong>PCB and sensor integration</strong> meet from real-time Zephyr and FreeRTOS systems to agentic workflows on AWS.
                     </p>
                     <p>
-                        I’ve supported <strong>100+ graduate students</strong> as a TA in embedded systems (C, microcontrollers, wireless protocols) and serve as <strong>Vice President of PAGSA</strong>, partnering across Penn’s Pan-Asian graduate community on academic and cultural programming.
+                        I've supported <strong>100+ graduate students</strong> as a TA in embedded systems (C, microcontrollers, wireless protocols) and serve as <strong>Vice President of PAGSA</strong>, partnering across Penn's Pan-Asian graduate community on academic and cultural programming.
                     </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>100+</h3>
-                            <p>Students supported (TA)</p>
-                        </div>
-                        <div class="stat">
-                            <h3>5</h3>
-                            <p>Featured projects</p>
-                        </div>
-                        <div class="stat">
-                            <h3>3rd</h3>
-                            <p>Rank in UG cohort (PDEU)</p>
-                        </div>
-                    </div>
+                    <a href="#" class="btn btn-primary resume-link">Resume (PDF)</a>
                 </div>
                 <div class="about-image">
                     <div class="image-placeholder">
-                        <img src="./images/PCB_board.png" alt="PCB design highlight">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIwIiBoZWlnaHQ9IjM5MCIgdmlld0JveD0iMCAwIDUyMCAzOTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MjAiIGhlaWdodD0iMzkwIiBmaWxsPSIjZjNlYmU0Ii8+Cjx0ZXh0IHg9IjI2MCIgeT0iMjAwIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM1YzRkNDIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPltJbWFnZSBQbGFjZWhvbGRlcl08L3RleHQ+Cjwvc3ZnPgo=" alt="Profile">
                     </div>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="stat">
+                    <h3>100+</h3>
+                    <p>Students supported (TA)</p>
+                </div>
+                <div class="stat">
+                    <h3>5</h3>
+                    <p>Featured projects</p>
+                </div>
+                <div class="stat">
+                    <h3>3rd</h3>
+                    <p>Rank in UG cohort (PDEU)</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Education Section -->
     <section id="education" class="education">
         <div class="container">
             <div class="section-header">
@@ -217,38 +203,37 @@
             <div class="education-grid">
                 <div class="education-card">
                     <div class="education-icon">
-                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h3>Master of Science in Electrical Engineering</h3>
                     <h4>University of Pennsylvania, SEAS</h4>
-                    <span class="education-date">Expected May 2026</span>
+                    <div class="education-date">Expected May 2026</div>
                     <p>Philadelphia, PA — Graduate coursework and research in embedded systems, digital design, and related areas.</p>
                 </div>
                 <div class="education-card">
                     <div class="education-icon">
-                        <i class="fas fa-university" aria-hidden="true"></i>
+                        <i class="fas fa-university"></i>
                     </div>
                     <h3>Bachelor of Technology in Electrical Engineering</h3>
-                    <h4>Pandit Deendayal Energy University (PDEU)</h4>
-                    <span class="education-date">May 2023</span>
+                    <h4>Pandit Deendayal Energy University</h4>
+                    <div class="education-date">May 2023</div>
                     <p>Gandhinagar, India — Strong foundation in circuits, systems, and engineering practice.</p>
-                    <div class="education-details">
-                        <span class="grade">GPA: 9.55/10</span>
-                    </div>
+                    <div class="grade">GPA: 9.55/10</div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <p>Electrical engineering · Embedded systems · Philadelphia, PA</p>
-                <p class="footer-links">
+                <div class="footer-links">
                     <a href="mailto:megham@seas.upenn.edu">megham@seas.upenn.edu</a>
                     <span class="footer-sep">·</span>
-                    <a href="https://www.linkedin.com/in/megha-mistry-31mkm/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                </p>
+                    <a href="#">LinkedIn</a>
+                </div>
             </div>
         </div>
     </footer>
